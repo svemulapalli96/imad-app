@@ -11,17 +11,17 @@ app.get('/', function (req, res) {
 
 app.get('/starter-one', function(req,res)
 {
-   ("This is the Starter Message and is working at /starter one here...!!") ;
+   res.send("This is the Starter Message and is working at /starter one here...!!") ;
 });
 
 app.get('/starter-two', function(req,res)
 {
-   ("This is the Starter two Message and is working at /starter two here...!!") ;
+   res.send("This is the Starter two Message and is working at /starter two here...!!") ;
 });
 
 app.get('/starter-one', function(req,res)
 {
-   ("This is the Starter three Message and is working at /starter three here...!!") ;
+   res.send("This is the Starter three Message and is working at /starter three here...!!") ;
 });
 
 app.get('/ui/style.css', function (req, res) {
