@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
 
 app.get('/starter-one', function(req,res)
 {
-   res.send("This is the Starter Message and is working at /starter one here...!!") ;
+   res.sendFile(path.join(__dirname, 'ui', 'starter-one.html')) ;
 });
 
 app.get('/starter-two', function(req,res)
