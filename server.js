@@ -9,6 +9,21 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+app.get('/starter-one', function(req,res)
+{
+   ("This is the Starter Message and is working at /starter one here...!!") ;
+});
+
+app.get('/starter-two', function(req,res)
+{
+   ("This is the Starter two Message and is working at /starter two here...!!") ;
+});
+
+app.get('/starter-one', function(req,res)
+{
+   ("This is the Starter three Message and is working at /starter three here...!!") ;
+});
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
