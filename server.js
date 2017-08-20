@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 var starters = {
-    starterOne: {
+    'starter-one': {
     title: 'Shashikanths starter-one',
     date: '5th Sept 2017',
     heading: 'Starter-one',
@@ -27,7 +27,7 @@ var starters = {
                 This is Starter One webpage of shashikanth vemulapalli's first article. This is Starter One webpage of shashikanth vemulapalli's first article. This is Starter One webpage of shashikanth vemulapalli's first article. This is Starter One webpage of shashikanth vemulapalli's first article. This is Starter One webpage of shashikanth vemulapalli's first article. This is Starter One webpage of shashikanth vemulapalli's first article. 
             </p>`
         },
-    starterTwo: {
+    'starter-two': {
   title: 'Shashikanths starter-two',
     date: '15th Sept 2017',
     heading: 'Starter-Two',  
@@ -35,7 +35,7 @@ var starters = {
                 This is Starter two webpage of shashikanth vemulapalli's Second article and i am staerae d ther fj ie froam kits waeranflal rijfa ijg jfijoijr aoijr  rijia rrf rfjfncaowo  iejf 
             </p>`
     },
-    starterThree:{
+    'starter-three':{
     title: 'Shashikanths starter-three',
     date: '25th Sept 2017',
     heading: 'Starter-Three',
