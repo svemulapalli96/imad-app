@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var content= {
+var starterOne= {
     title: 'Shashikanths starter-one',
     date: '5th Sept 2017',
     heading: 'Starter-one',
@@ -69,7 +69,7 @@ return htmlTemplate;
 
 app.get('/starter-one', function(req,res)
 {
-   res.send(createTemplate(starter-one)) ;
+   res.send(createTemplate(starterOne)) ;
 });
 
 app.get('/starter-two', function(req,res)
