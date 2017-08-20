@@ -91,15 +91,7 @@ app.get('/:starterName', function(req,res)
    res.send(createTemplate(starters[starterName])) ;
 });
 
-app.get('/starter-two', function(req,res)
-{
-   res.send(createTemplate(starterTwo)) ;
-});
 
-app.get('/starter-three', function(req,res)
-{
-    res.sendFile(path.join(__dirname,'ui','starter-three.html')) ;
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
