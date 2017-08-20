@@ -8,8 +8,8 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
-var starterOne= {
+var starters = {
+    starterOne: {
     title: 'Shashikanths starter-one',
     date: '5th Sept 2017',
     heading: 'Starter-one',
@@ -25,9 +25,27 @@ var starterOne= {
             <p>
                 This is Starter One webpage of shashikanth vemulapalli's first article. 
                 This is Starter One webpage of shashikanth vemulapalli's first article. This is Starter One webpage of shashikanth vemulapalli's first article. This is Starter One webpage of shashikanth vemulapalli's first article. This is Starter One webpage of shashikanth vemulapalli's first article. This is Starter One webpage of shashikanth vemulapalli's first article. This is Starter One webpage of shashikanth vemulapalli's first article. 
-            </p>
+            </p>`
+        },
+    starterTwo: {
+  title: 'Shashikanths starter-two',
+    date: '15th Sept 2017',
+    heading: 'Starter-Two',  
+    content: `<p>
+                This is Starter two webpage of shashikanth vemulapalli's Second article and i am staerae d ther fj ie froam kits waeranflal rijfa ijg jfijoijr aoijr  rijia rrf rfjfncaowo  iejf 
+            </p>`
+    },
+    starterThree:{
+    title: 'Shashikanths starter-three',
+    date: '25th Sept 2017',
+    heading: 'Starter-Three',
+    content:`<p>
+                This is Starter three webpage of shashikanth vemulapalli's third article
+                This is shashikanth typing the information from kits warangal to the server in banglore.
+            </p>`
+    
+    }
         
-        `
  };
  function createTemplate(data)
  {
@@ -67,14 +85,15 @@ var starterOne= {
 return htmlTemplate;
 }
 
-app.get('/starter-one', function(req,res)
+app.get('/:starterName', function(req,res)
 {
-   res.send(createTemplate(starterOne)) ;
+    var starterName = req.params.starterName;
+   res.send(createTemplate(starters[starterName])) ;
 });
 
 app.get('/starter-two', function(req,res)
 {
-   res.sendFile(path.join(__dirname,'ui','starter-two.html')) ;
+   res.send(createTemplate(starterTwo)) ;
 });
 
 app.get('/starter-three', function(req,res)
