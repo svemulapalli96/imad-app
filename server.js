@@ -16,12 +16,12 @@ app.get('/starter-one', function(req,res)
 
 app.get('/starter-two', function(req,res)
 {
-   res.send("This is the Starter two Message and is working at /starter two here...!!") ;
+   res.sendFile(path.join(__dirname,'ui','starter-two.html')) ;
 });
 
 app.get('/starter-three', function(req,res)
 {
-   res.send("This is the Starter three Message and is working at /starter three here...!!") ;
+    res.sendFile(path.join(__dirname,'ui','starter-three.html')) ;
 });
 
 app.get('/ui/style.css', function (req, res) {
