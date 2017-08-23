@@ -107,6 +107,10 @@ app.get('/counter', function(req,res){
     res.send(counter.toString());
 });
 
+app.get('/hello',function(req,res){
+    res.send("Hello This is shashikanth");
+});
+
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
