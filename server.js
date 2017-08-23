@@ -85,6 +85,13 @@ var starters = {
 return htmlTemplate;
 }
 
+var counter = 0;
+app.get('/counter', function(req,res){
+    counter = counter + 1;
+    res.send(counter.toString());
+});
+
+
 app.get('/:starterName', function(req,res)
 {
     var starterName = req.params.starterName;
@@ -101,15 +108,8 @@ app.get('/ui/main.js', function(req,res){
     res.sendFile(path.join(__dirname,'ui','main.js'));
 });
 
-var counter = 0;
-app.get('/counter', function(req,res){
-    counter = counter + 1;
-    res.send(counter.toString());
-});
 
-app.get('/hello',function(req,res){
-    res.send("Hello This is shashikanth");
-});
+
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
